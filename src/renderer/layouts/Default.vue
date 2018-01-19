@@ -5,8 +5,14 @@
                 <header class="column">
                     <featured :message="lastMessage" v-if="lastMessage" @blink="playAudio"></featured>
                 </header>
-                <footer class="column">
-                    <img src="static/images/logo.png">
+                <footer class="column columns">
+                    <div class="column is-2" id="brasao">
+                        <img src="static/images/logo.png">
+                    </div>
+                    <div class="column is-10" id="noticia">
+                      <h2>NOTÍCIAS</h2>
+                      <h1>Saúde rondonense comemora aquisição de novos veículos </h1>
+                    </div>
                 </footer>
             </div>
             <div class="column is-one-quarter history-column">
@@ -90,11 +96,11 @@
 
         footer
             height: 20vh
-            background-color: #f1f1f1
-            padding: 5vh
+            background-color: #aaf5d0
+            padding: 3vh
 
             img
-                height: 10vh
+                width: 100%;
 
         .featured-message
             text-align: center
@@ -110,21 +116,21 @@
                 font-size: 10vh
 
     .history-column
-        background-color: #4fc08d
+        background-color: #26704c
         height: 100vh
 
         >div
             padding: 4vh
 
         *
-            color: #2c3e50
+            color: #fff;
 
         .title
-            text-align: center
-            font-weight: bold
+            text-align: center;
+            font-weight: bold;
 
         .message
-            background-color: transparent
+            background-color: transparent;
 
         .empty
             p
@@ -134,7 +140,7 @@
         .history
             .message
                 span
-                    text-align: left
+                    text-align: center
                     display: block
 
                 .title
@@ -144,4 +150,20 @@
                 .subtitle
                     font-size: 4vh
                     font-style: italic
+    #noticia
+        color: #000;
+
+        h1
+          font-size: 180%;
+          font-weight: bolder;
+          text-transform: uppercase;
+          background: #fff;
+          color: #000;
+          padding: 0 10px;
+        h2
+            font-size: 140%;
+            font-weight: bold;
+            background: #26704c;
+            color: #fff;
+            padding: 0 10px;
 </style>

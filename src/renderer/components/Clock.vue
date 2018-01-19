@@ -21,7 +21,7 @@
 
 <script>
     import moment from 'moment'
-    
+
     export default {
         name: 'Clock',
         data() {
@@ -44,11 +44,11 @@
             },
             showDate: {
                 type: Boolean,
-                default: true,  
+                default: true,
             },
             dateFormat: {
                 type: String,
-                default: 'MMMM Do YYYY',  
+                default: 'DD/MM/YYYY',  
             },
             locale: {
                 type: String,

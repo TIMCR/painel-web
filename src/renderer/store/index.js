@@ -39,6 +39,6 @@ const store = new Vuex.Store({
 })
 
 Vue.use(vuexI18n.plugin, store)
-Vue.i18n.set('en')
+Vue.i18n.set('pt_BR')
 
 export default store

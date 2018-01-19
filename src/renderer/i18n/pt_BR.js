@@ -7,5 +7,16 @@ export default {
 	"menu.sound": "Som",
 	"history.title": "Histórico",
 	"history.empty": "Vazio",
-	"settings.services.empty": "Vazio"
+	"settings.services.empty": "Vazio",
+	"settings.label.server": "Servidor",
+	"settings.label.username": "Usuário",
+	"settings.label.password": "Senha",
+	"settings.label.client_id": "Client ID",
+	"settings.label.client_secret": "Client Secret",
+	"settings.label.unity": "Unidades",
+	"settings.label.services": "Serviços",
+	"settings.label.alert": "Alerta",
+	"settings.btn.save": "Salvar",
+	"settings.title": "Configurações",
+	"settings.subtitle": "Configurações do Painel",
 }

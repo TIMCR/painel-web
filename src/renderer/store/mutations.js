@@ -13,7 +13,7 @@ export default {
         state.config = config
         storage.set('config', config)
 
-        const locale = config.locale || 'en'
+        const locale = config.locale || 'pt_BR'
         const dict = require(`../i18n/${locale}.js`).default
 
         Vue.i18n.add(locale, dict)
