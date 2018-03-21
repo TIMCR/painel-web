@@ -10,8 +10,8 @@
                         <img src="static/images/logo.png">
                     </div>
                     <div class="column is-10" id="noticia">
-                      <h2>NOTÍCIAS</h2>
-                      <h1>Saúde rondonense comemora aquisição de novos veículos </h1>
+                      <h2 id="nomeNoticia">CARREGANDO NOTÍCIAS...</h2>
+                      <h1 id="tituloNoticia"></h1>
                     </div>
                 </footer>
             </div>
@@ -97,7 +97,7 @@
         footer
             height: 20vh
             background-color: #aaf5d0
-            padding: 3vh
+            padding: 2vh
 
             img
                 width: 100%;
