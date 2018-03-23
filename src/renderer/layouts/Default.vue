@@ -59,6 +59,12 @@
 </script>
 
 <style lang="sass">
+    .columns
+        .column
+            @media screen and (max-width: 85.4rem)
+                padding: 1rem 2rem;
+            @media screen and (min-width: 85.4rem)
+                padding: 2rem;
     .layout-content
         position: fixed
         width: 100%

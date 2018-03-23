@@ -42,15 +42,15 @@
           Object.keys(data).map(function (k, index) {
             noticias[i++] = data[k].title;
           });
+          if (init == 1) {
+            init = 0;
+            setTimeout(function () { document.getElementById("nomeNoticia").innerHTML = "NOTÍCIAS"; }, 3000);
+            setTimeout(function () { changeNoticia(); }, 3000);
+          }
+          setTimeout(function () { getNoticias() }, 600000);
         }, function (status) { //error detection....
-
+          setTimeout(function () { getNoticias() }, 30000);
         });
-        if (init == 1) {
-          init = 0;
-          setTimeout(function () { document.getElementById("nomeNoticia").innerHTML = "NOTÍCIAS"; }, 1000);
-          setTimeout(function () { changeNoticia(); }, 1000);
-        }
-        setTimeout(function () { getNoticias() }, 600000);
       }
 
       var thisNoticia = 0;
@@ -59,10 +59,10 @@
         if (thisNoticia > 3) {
           thisNoticia = 0;
         }
-        setTimeout(function () { changeNoticia() }, 10000);
+        setTimeout(function () { changeNoticia() }, 20000);
       }
 
-      setTimeout(function () { getNoticias() }, 1000);
+      setTimeout(function () { getNoticias() }, 3000);
     </script>
 
     <!-- webpack builds are automatically injected -->
