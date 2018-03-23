@@ -97,10 +97,13 @@
         footer
             height: 20vh
             background-color: #aaf5d0
-            padding: 2vh
+            padding: 2vh 2vw
 
             img
                 width: 100%;
+
+            #brasao
+                padding: 0 .75rem 0 2rem;
 
         .featured-message
             text-align: center
@@ -152,14 +155,18 @@
                     font-style: italic
     #noticia
         color: #000;
+        padding: 0 0.75rem 0 0.75rem !important;
 
         h1
-          font-size: 180%;
           font-weight: bolder;
           text-transform: uppercase;
           background: #fff;
           color: #000;
           padding: 0 10px;
+          @media screen and (max-width: 85.4rem)
+            font-size: 180%;
+          @media screen and (min-width: 85.4rem)
+            font-size: 260%;
         h2
             font-size: 140%;
             font-weight: bold;

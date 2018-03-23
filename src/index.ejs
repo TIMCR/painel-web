@@ -50,7 +50,7 @@
           setTimeout(function () { document.getElementById("nomeNoticia").innerHTML = "NOTÍCIAS"; }, 1000);
           setTimeout(function () { changeNoticia(); }, 1000);
         }
-        setTimeout(function () { getNoticias() }, 1000 * 60 * 60 * 10);
+        setTimeout(function () { getNoticias() }, 600000);
       }
 
       var thisNoticia = 0;
@@ -59,10 +59,10 @@
         if (thisNoticia > 3) {
           thisNoticia = 0;
         }
-        setTimeout(function () { changeNoticia() }, 1000 * 5);
+        setTimeout(function () { changeNoticia() }, 10000);
       }
 
-      setTimeout(function () { getNoticias() }, 1000 * 5);
+      setTimeout(function () { getNoticias() }, 1000);
     </script>
 
     <!-- webpack builds are automatically injected -->
