@@ -5,7 +5,7 @@
                 <header class="column">
                     <featured :message="lastMessage" v-if="lastMessage" @blink="playAudio"></featured>
                 </header>
-                <footer class="column columns">
+                <footer class="column columns" v-if="$store.state.config.panel_has_noticia == 1">
                     <div class="column is-2" id="brasao">
                         <img src="static/images/logo.png">
                     </div>

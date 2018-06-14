@@ -37,20 +37,22 @@
       var noticias = [];
       var init = 1;
       function getNoticias() {
-        getJSON('http://192.168.1.24/feed').then(function (data) {
-          var i = 0;
-          Object.keys(data).map(function (k, index) {
-            noticias[i++] = data[k].title;
+        if(JSON.parse(localStorage.getItem("painel-web.v2.config")).panel_has_noticia == 1){
+          getJSON(JSON.parse(localStorage.getItem("painel-web.v2.config")).panel_url_json).then(function (data) {
+            var i = 0;
+            Object.keys(data).map(function (k, index) {
+              noticias[i++] = data[k].title;
+            });
+            if (init == 1) {
+              init = 0;
+              setTimeout(function () { document.getElementById("nomeNoticia").innerHTML = "NOTÍCIAS"; }, 3000);
+              setTimeout(function () { changeNoticia(); }, 3000);
+            }
+            setTimeout(function () { getNoticias() }, 600000);
+          }, function (status) { //error detection....
+            setTimeout(function () { getNoticias() }, 30000);
           });
-          if (init == 1) {
-            init = 0;
-            setTimeout(function () { document.getElementById("nomeNoticia").innerHTML = "NOTÍCIAS"; }, 3000);
-            setTimeout(function () { changeNoticia(); }, 3000);
-          }
-          setTimeout(function () { getNoticias() }, 600000);
-        }, function (status) { //error detection....
-          setTimeout(function () { getNoticias() }, 30000);
-        });
+        }
       }
 
       var thisNoticia = 0;

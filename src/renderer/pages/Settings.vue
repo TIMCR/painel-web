@@ -32,6 +32,11 @@
                                 {{ 'menu.sound'|translate }}
                             </a>
                         </li>
+                        <li>
+                            <a @click="showTab('panel')">
+                                Painel
+                            </a>
+                        </li>
                     </ul>
                 </aside>
             </div>
@@ -188,6 +193,43 @@
                                 </a>
                             </div>
                         </div-->
+
+                        <div class="control is-grouped">
+                            <div class="control">
+                                <button type="submit" class="button is-primary is-large">
+                                    Salvar &nbsp;
+                                    <span class="icon is-small">
+                                        <i class="fa fa-save"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form @submit.prevent="save" v-if="tab==='panel'">
+                        <div class="field">
+                            <label class="label">
+                                URL para Recuperar JSON de Notícias
+                            </label>
+                            <div class="control">
+                                <input class="input is-medium" type="text" placeholder="" v-model="config.panel_url_json">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">
+                                Aparecer Notícia?
+                            </label>
+                            <div class="control">
+                                <div class="select">
+                                    <select
+                                        v-model="config.panel_has_noticia">
+                                        <option value="0">Não</option>
+                                        <option value="1">Sim</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="control is-grouped">
                             <div class="control">
